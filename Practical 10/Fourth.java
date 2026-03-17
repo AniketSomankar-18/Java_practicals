@@ -1,24 +1,33 @@
 class AreaCalculator{
-    static void area(int _length, int _breadth){
+
+    static int area(int _length, int _breadth){
             int length = _length;
             int breadth = _breadth;
-            return "Area of Rectangle:"+length*breadth;
+            return length*breadth;
     }
     
-    static void area(int _side){
+    static int area(int _side){
             int side = _side;
-            return "Area of Square:"+side*side;
+            return side*side ;
     }
     
-    static void area(int _base,int _height){
+    static float area(float _half, int _base,int _height){
+            float half = _half;
             int base = _base;
             int height = _height;
-            return "Area of Triangle:"+(1/2*(base*height));
+            return half*base*height;
     }
     
-    static void area(double _radius){
-            int radius = _radius;
-            return "Area of Circle:"+(PI*radius*radius);
+    static double area(double _radius){
+            double radius = _radius;
+            return Math.PI*radius*radius;
+    }
+    
+    public static void main(String[] args){
+            System.out.println("Area of Rectangle:"+area(3,6));
+            System.out.println("Area of Square:"+area(5));
+            System.out.println("Area of Triangle:"+area(0.5F,7,3));
+            System.out.println("Area of Circle:"+area(5.5F));
     }
 
 }
